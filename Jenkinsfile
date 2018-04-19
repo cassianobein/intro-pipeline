@@ -3,12 +3,12 @@ pipeline {
   libraries {
     lib("SharedLibs")
   }
-      stage('Shared Lib') {
-         steps {
-             helloWorld("Jenkins")
-         }
-      }  
   stages {
+      stage('Shared Lib') {
+     steps {
+         helloWorld("Jenkins")
+     }
+    }  
     stage('Deploy') {
       input {
         message 'Should we continue?'
