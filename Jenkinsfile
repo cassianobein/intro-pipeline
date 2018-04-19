@@ -1,5 +1,13 @@
 pipeline {
   agent any
+  libraries {
+    lib("SharedLibs")
+  }
+      stage('Shared Lib') {
+         steps {
+             helloWorld("Jenkins")
+         }
+      }  
   stages {
     stage('Deploy') {
       input {
